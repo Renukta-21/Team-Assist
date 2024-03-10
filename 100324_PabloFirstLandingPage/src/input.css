@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navItems li {
+    @apply mx-5 inline cursor-pointer;
+  }
+  .card {
+    @apply w-[230px] p-3 border border-gray-500 rounded-2xl py-16 hover:shadow-xl transition-all cursor-pointer h-[300px];
+  }
+  .hamburger {
+    @apply w-16 h-16 md:hidden cursor-pointer;
+  }
+  .menu {
+    @apply inset-0 fixed backdrop-filter backdrop-blur-sm z-10 grid place-items-center md:hidden;
+  }
+  .crossIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .galleryImg {
+    @apply rounded-2xl overflow-hidden hover:scale-105 cursor-pointer transition-all;
+  }
+  .gridPres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+}
